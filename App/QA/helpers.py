@@ -101,7 +101,7 @@ def ask_with_memory(vector_store, question, chat_histoy):
     from langchain.chains import ConversationalRetrievalChain
     from langchain.chat_models import ChatOpenAI
 
-    llm = ChatOpenAI(model='gpt-3.5-turbo', temperature=1)
+    llm = ChatOpenAI(model='gpt-4-turbo', temperature=1)
     retriever = vector_store.as_retriever(search_type='similarity', search_kwargs={"k": 3})
 
     crc = ConversationalRetrievalChain.from_llm(llm, retriever)

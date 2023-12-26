@@ -1,0 +1,220 @@
+{
+	"info": {
+		"_postman_id": "ce5adaef-1a2f-4e8f-9e48-7fc275ff610f",
+		"name": "Graduation Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29861225"
+	},
+	"item": [
+		{
+			"name": "ChatBot",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "question",
+							"value": "امراض القالب",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{base_url}}/chat",
+				"description": "## description\n\nthis api is used to iteract with custom chatgpt model .\n\n## Input :\n\n{ \"question: user input }\n\n## output :\n\n{ \"answer\" : answer from gpt }"
+			},
+			"response": [
+				{
+					"name": "ChatBot",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "question",
+									"value": "امراض القالب",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:5000/chat"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.0 Python/3.9.13"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Dec 2023 11:44:59 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "3275"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"answer\": \"أمراض القالب هي الأمراض التي يمكن أن تسببها التعرض المزمن للقوالب الفطرية. تعتبر القوالب الفطرية نباتات صغيرة تتكاثر عن طريق إنتاج بذور صغيرة جداً تعرف باسم البزغات. عندما ينجح البزغ في الوصول إلى مكان رطب ودافئ، يبدأ بالنمو وتكاثره ويشكل ما يشبه الحبل الفطري أو القالب على الأسطح المختلفة. قد يتكون القالب في المنازل أو المباني الرطبة والرطبة أو في المواد الغذائية المتعفنة. العوامل الرئيسية التي تسهم في ظهور قوالب معينة هي الرطوبة والحرارة ونوعية المادة المصابة. من المهم الإشارة إلى أن المعرضين للقوالب قد يعانون من أعراض تنفسية وجلدية وحساسية ومشاكل صحية أخرى. ومع ذلك، فإن التشخيص والعلاج يتم عادة بواسطة المختصين في الطب والبيئة.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "CHD Table",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"gender\": \"Male\",\r\n  \"age\": 39,\r\n  \"education\": \"Higher Degree\",\r\n  \"currentSmoker\": 0,\r\n  \"cigsPerDay\": 0,\r\n  \"BPMeds\": 0,\r\n  \"prevalentStroke\": 0,\r\n  \"prevalentHyp\": 0,\r\n  \"diabetes\": 0,\r\n  \"totChol\": 195,\r\n  \"sysBP\": 106,\r\n  \"diaBP\": 70,\r\n  \"BMI\": 26.97,\r\n  \"heartRate\": 80,\r\n  \"glucose\": 77\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url}}/chd"
+			},
+			"response": [
+				{
+					"name": "example1",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"gender\": \"Male\",\r\n  \"age\": 39,\r\n  \"education\": \"Higher Degree\",\r\n  \"currentSmoker\": 0,\r\n  \"cigsPerDay\": 0,\r\n  \"BPMeds\": 0,\r\n  \"prevalentStroke\": 0,\r\n  \"prevalentHyp\": 0,\r\n  \"diabetes\": 0,\r\n  \"totChol\": 195,\r\n  \"sysBP\": 106,\r\n  \"diaBP\": 70,\r\n  \"BMI\": 26.97,\r\n  \"heartRate\": 80,\r\n  \"glucose\": 77\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:5000/chd"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.0 Python/3.9.13"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Dec 2023 12:20:59 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "22"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"prediction\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Doctors Recommendations",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "city",
+							"value": "المنوفية",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{base_url}}/get_doctors",
+				"description": "this api is used to get the doctor recommedation for client if its results is posivite either chd or stroke.\n\n## input\n\ncity\n\n## output\n\nlist of doctor's data such as name , image, location ,and proce"
+			},
+			"response": [
+				{
+					"name": "Get Doctors Recommendations",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "city",
+									"value": "المنوفية",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:5000/get_doctors"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.0 Python/3.9.13"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Dec 2023 16:36:18 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "4517"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"image\": \"https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENTce74d2/Profile/150/doctor-tamer-elashkar-cardiology-and-vascular-disease_20200929184427249.jpg\",\n        \"location\": \"شبين الكوم : قويسنا - أمام موقف شبين \",\n        \"name\": \"تامر الأشقر\",\n        \"price\": \"١٥٠ \"\n    },\n    {\n        \"image\": \"https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENTf61a6c/Profile/150/clinic-mohamed-asem-allam-cardiology-and-vascular-disease_20221004072849300.jpg\",\n        \"location\": \"شبين الكوم : ميدان شرف\",\n        \"name\": \"محمد عاصم علام\",\n        \"price\": \"١٨٠ \"\n    },\n    {\n        \"image\": \"https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENT9b1362/Profile/150/doctor-morsy-mostafa-cardiology-and-vascular-disease_20231005001152409.jpg\",\n        \"location\": \"شبين الكوم : قويسنا - أمام مطعم أبو عميرة-شارع الجيش\",\n        \"name\": \"مرسي مصطفي\",\n        \"price\": \"١٣٠ \"\n    },\n    {\n        \"image\": \"https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENT187fa96d1daec1cc/Profile/150/doctor-ahmed-saber-cardiology-and-vascular-disease-1_20220508202306758.jpg\",\n        \"location\": \"منوف : شارع الجيش\",\n        \"name\": \"احمد صابر\",\n        \"price\": \"١٥٠ \"\n    },\n    {\n        \"image\": \"https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENTeb93c8f908b30f60/Profile/150/doctor-nader-mohamed-hussien-hassan-cardiology-and-vascular-disease_20230802122948706.jpg\",\n        \"location\": \"شبين الكوم : قويسنا - شارع الجيش\",\n        \"name\": \"نادر  محمد صولة \",\n        \"price\": \"١٥٥ \"\n    },\n    {\n        \"image\": \"https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENT261da2eb4fd02646/Profile/150/doctor-aly-nasr-mashal-cardiology-and-vascular-disease_20231113045048962.jpg\",\n        \"location\": \"شبين الكوم : ميدان شرف\",\n        \"name\": \"على نصر مشعل\",\n        \"price\": \"٢٥٠ \"\n    },\n    {\n        \"image\": \"https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENT3cb1a39ae1f9d423/Profile/150/mohamed-galal-meshahit-cardiology-and-vascular-disease_20221217174443167.jpg\",\n        \"location\": \"مدينة السادات : أبو بكر الصديق\",\n        \"name\": \"محمد جلال مشاحيت\",\n        \"price\": \"٢٠٠ \"\n    },\n    {\n        \"image\": \"https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENT6517a8d4534626d1/Profile/150/doctor-khaled-el-saeed-cardiology-and-vascular-disease_20220124161823693.jpg\",\n        \"location\": \"شبين الكوم : قويسنا ١ شارع الصباحي تقاطع شارع صبرى  عمارة الحرمين\",\n        \"name\": \"خالد السعيد\",\n        \"price\": \"١٨٠ \"\n    },\n    {\n        \"image\": \"https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENT967dda40ddb614a9/Profile/150/doctor-nowrus-emad-amer-cardiology-and-vascular-disease_20220803153539539.jpg\",\n        \"location\": \"شبين الكوم : جمال عبد الناصر\",\n        \"name\": \"نورس  عماد عامر\",\n        \"price\": \"١٥٠ \"\n    }\n]"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:5000"
+		}
+	]
+}
