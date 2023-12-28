@@ -5,7 +5,8 @@ import os
 import json
 import joblib
 from QA import *
-from chd import *
+import chd
+import stroke
 
 load_dotenv(find_dotenv(), override=True)
 app = Flask(__name__)
@@ -27,13 +28,14 @@ def chat():
 
 
 @app.route("/chd", methods=["GET"])
-def chd_page():
+def chd_prediction():
     if request.method == "GET":
         data = request.json
-        pipeline = joblib.load("pipeline.joblib")
-        model = joblib.load("best_model.joblib")
 
-        prediction = perform_prediction(data, pipeline, model)
+        pipeline = joblib.load("chd/pipeline.joblib")
+        model = joblib.load("chd/best_model.joblib")
+
+        prediction = chd.perform_prediction(data, pipeline, model)
         return prediction
 
 
@@ -46,11 +48,26 @@ def det_doctors():
         data_list = []
         for i in range(len(custom_data)):
             row_data = custom_data.iloc[i]
-            dict_data = {"name":str(row_data[0]), "image":row_data.image,
-                         "location":row_data.location, "price":row_data.price}
+            dict_data = {"name": str(row_data[0]), "image": row_data.image,
+                         "location": row_data.location, "price": row_data.price}
             data_list.append(dict_data)
 
         return jsonify(data_list)
+
+
+
+
+
+
+@app.route("/stroke", methods=["GET"])
+def stroke_prediction():
+    if request.method == "GET":
+        data = request.json
+        pipeline = joblib.load("chd/pipeline.joblib")
+        model = joblib.load("chd/best_model.joblib")
+
+        prediction = stroke.perform_prediction(data, pipeline, model)
+        return prediction
 
 
 if __name__ == "__main__":
