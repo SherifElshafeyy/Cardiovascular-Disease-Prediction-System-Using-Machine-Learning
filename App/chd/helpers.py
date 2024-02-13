@@ -1,20 +1,33 @@
+import pandas as pd
 
-def perform_prediction(input_data, pipeline, model):
-    import pandas as pd
-    from sklearn.decomposition import PCA
-    intput_df = pd.DataFrame(input_data, index=[0])
+postive_message = """
+Our recent analysis using the cardiovascular
+prediction system indicates an elevated risk for
+Coronary Heart Disease (CHD). It's crucial to view this
+as a proactive opportunity for early intervention and
+management. Sorry, Please schedule a visit with a
+healthcare provider for a comprehensive evaluation
+and personalized advice.
+Get well soon ."""
 
-    ### Transformations ###
-    ## 1
-    pca = PCA(n_components=1)
-    pca_result = pca.fit_transform(intput_df[['sysBP', 'diaBP']])
-    intput_df['sys_dia'] = pca_result
+negative_message="""
+Good news from your recent health assessment:
+your CHD risk is low based on our analysis. It's a
+positive sign, but staying on a healthy path is key.
+Keep up with balanced eating, exercise, and stress
+management.
+Best."""
 
-    ## 2
+def perform_prediction(sample_input_data, pipeline, model):
+    intput_df = pd.DataFrame(sample_input_data, index=[0])
+    intput_df['BMI'] =  intput_df.weight / (intput_df.height * intput_df.height)
+    intput_df = intput_df.drop(['height', 'weight'], axis=1)
 
+    preprocessed_data = pipeline.transform(intput_df)
 
-    # preprocessed_data = pipeline.transform(intput_df)
-    #
-    # prediction = model.predict(preprocessed_data)
+    prediction = model.predict(preprocessed_data)
 
-    return {"prediction": 1}
+    if str(prediction[0]) == "1":
+        return {"prediction": "1", "Message": postive_message}
+    elif str(prediction[0]) == "0":
+        return {"prediction": "0", "Message": negative_message}

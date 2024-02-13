@@ -2,11 +2,13 @@ flask
 gunicorn
 openai
 langchain
-pinecone-client
+chromadb
 python-dotenv
-tiktoken
 flask
-dotenv
 pandas
-json
 joblib
+tiktoken
+openpyxl
+scikit-learn
+scikit-image
+opencv-python==4.9.0.80
