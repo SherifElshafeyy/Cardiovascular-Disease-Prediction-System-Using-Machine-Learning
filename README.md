@@ -25,13 +25,13 @@ Our project provide an intuitive platform for early detection and prevention of 
 ## Results
 
  - CHD
-![chd results](CHd/chd.png)
+![chd results](https://github.com/ahmedbasemdev/Graduation-Project/blob/main/CHD/chd.png)
  - Stroke
- ![stroke results](stroke/stroke.png)
+ ![stroke results](https://github.com/ahmedbasemdev/Graduation-Project/blob/main/Stroke/stroke.png)
  - MI
- ![Mi results](MI/mi.png)
+ ![Mi results](https://github.com/ahmedbasemdev/Graduation-Project/blob/main/MI/MI.png)
  - ECG
-![ECG results](ecg/ecg.png)
+![ECG results](https://github.com/ahmedbasemdev/Graduation-Project/blob/main/ECG/ecg.png)
 
 ## Power Bi Dashboards
 - CHD
