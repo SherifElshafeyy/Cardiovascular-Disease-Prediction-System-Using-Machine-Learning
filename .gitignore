@@ -1,1 +1,3 @@
-Notebooks
+*.joblib
+*.csv
+shifaa_VDB
