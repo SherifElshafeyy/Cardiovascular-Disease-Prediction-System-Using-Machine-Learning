@@ -1,7 +1,7 @@
 ## Project Title
 Cardiovascular Diseases Prediction System Using Machine Learning
 ## Project Description
-Our project provide an intuitive platform for early detection and prevention of cardiovascular diseases. Leveraging advanced machine learning algorithms and comprehensive medical datasets, our platform offers personalized risk assessments, empowering users to take proactive steps towards better cardiovascular health. With a user-friendly interface and innovative features like chatbot integration, we're committed to making healthcare accessible and effective for everyone.
+Our project provide an intuitive platform for early prediction and prevention of cardiovascular diseases. Leveraging advanced machine learning algorithms and comprehensive medical datasets, our platform offers personalized risk assessments, empowering users to take proactive steps towards better cardiovascular health. With a user-friendly interface and innovative features like chatbot integration, we're committed to making healthcare accessible and effective for everyone.
 ## Team Members
 
  - [Ahmed Basem El-Basiouny](https://github.com/ahmedbasemdev)
