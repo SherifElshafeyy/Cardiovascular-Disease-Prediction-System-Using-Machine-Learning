@@ -8,7 +8,7 @@ Our project provide an intuitive platform for early detection and prevention of 
  - [Ahmed Tarek Salam](https://github.com/AhmedSalam24)
  - [Roqia Adel Shehata](https://github.com/Roqia11)
  - [Rowida Adel Shehata](https://github.com/RowidaAdel)
- - [Salma Adel Saleh](https://github.com/xsalmadel)
+ - [Salma Adel Saleh](https://github.com/salmadel)
  - [Sherif Ali El-Shafey](https://github.com/SherifElshafeyy)
  
 ## Tools
